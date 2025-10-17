@@ -1,10 +1,10 @@
 // Змінні для основних параметрів (згідно з макетом)
 $width: 1440px;
-$header-height: 740px;
-$footer-height: 786px;
-$bouquet-section-height: 627px;
+$header-height: 240px;
+$footer-height: 186px;
+$bouquet-section-height: 227px;
 $template-section-height: 217px;
-$content-height: 994px;
+$content-height: 594px;
 
 // Базові стилі
 * {
@@ -21,30 +21,31 @@ body {
 
 .header {
     height: $header-height;
-    background-color: #f0f0f0; // Заміни на колір із макету
+    background-color: #ffffff; // Заміни на колір із макету
+    text-align: center;
 }
 
 .content {
     min-height: $content-height;
-    background-color: #ffffff; // Заміни на колір із макету
+    background-color: #F8FFFC; // Заміни на колір із макету
 }
 
 .bouquet-section {
     height: $bouquet-section-height;
-    background-color: #e8f0f5; // Колір із макету
+    background-color: #F8FFFC; // Колір із макету
     padding: 20px;
 }
 
 .template-section {
     height: $template-section-height;
-    background-color: #f5f5f5; // Колір із макету
+    background-color: #F8FFFC; // Колір із макету
     margin-bottom: 20px;
 }
 
 .footer {
     height: $footer-height;
-    background-color: #333; // Заміни на колір із макету
-    color: white;
+    background-color: #ffffff; // Заміни на колір із макету
+    color: #000000;
     text-align: center;
     padding: 20px;
 }

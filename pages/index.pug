@@ -1,11 +1,11 @@
 doctype html
-html(lang="en")
+html(lang="uk")
   head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Моя лабораторна робота
-    link(rel="stylesheet" href="/scss/main.scss")
+    title Прототип LR5
   body
-    include ../components/header.pug
-    include ../components/content.pug
-    include ../components/footer.pug
+    include ./components/header.pug
+    include ./components/content.pug
+    include ./components/footer.pug
+
+  script(type="module" src="/src/main.ts")
