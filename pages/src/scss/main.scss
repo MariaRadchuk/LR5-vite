@@ -1,6 +1,4 @@
 // src/scss/main.scss
 @use 'base/variables' as *;
 @use 'components/header' as *;
-
-// Додаси інші компоненти пізніше:
-// @use 'components/hero' as *;
+@use 'components/hero' as *;

@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eApteka — інтернет-аптека</title>
-    <link rel="stylesheet" href="/src/scss/main.scss" />
+    <link rel="stylesheet" href="/src/scss/main.scss">
   </head>
   <body></body>
 </html>
+<!-- components/header.pug-->
 <header class="header">
-  <div class="container">
-    <div class="header__logo">
-      <!-- <img src="/src/assets/images/logo_eApteka.png" /><span>eApteka</span> -->
-    </div>
-    <nav class="nav">
+  <div class="container"><a class="header__logo" href="/"><img src="/src/assets/images/logo_eApteka.png" alt="eApteka"></a>
+    <nav class="header__nav">
       <ul>
-        <li><a href="#">Головна</a></li>
+        <li><a class="active" href="/">Головна</a></li>
         <li><a href="#promos">Акції</a></li>
         <li><a href="#contacts">Контакти</a></li>
       </ul>
     </nav>
-    <div class="header__search">
-      <input type="text" placeholder="Пошук" />
-      <button type="button">🔍</button>
-    </div>
+    <form class="header__search" role="search">
+      <input type="text" placeholder="Пошук" aria-label="Пошук ліків">
+      <button type="submit">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+    </form>
     <div class="header__icons">
-      <button type="button">👤</button>
-      <button type="button">🛒</button>
+      <button class="header__user" type="button" aria-label="Профіль">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+      <button class="header__cart" type="button" aria-label="Кошик">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.5 12h11l2.5-12h4"></path>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
+<!-- components/hero.pug-->
 <section class="hero">
   <div class="hero__content">
-    <img class="hero__img" src="/images/hero.png" alt="eApteka" />
-    <h1>eApteka</h1>
-    <p>Знайди ліки в нашому інтернет-магазині</p>
+    <h1 class="hero__title">eApteka</h1>
+    <p class="hero__subtitle">Знайди ліки в нашому<br>інтернет-магазині</p>
   </div>
 </section>
 <section class="promos" id="promos">
   <h2 class="section-title">Акції</h2>
   <div class="cards-grid">
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
@@ -70,48 +80,42 @@
   <h2 class="section-title">Наші товари</h2>
   <div class="cards-grid">
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
       <p class="card-text">Body text for whatever you'd like to say...</p>
     </div>
     <div class="card">
-      <div class="card-img">
-        <img src="/images/placeholder.svg" alt="Фото товару" />
+      <div class="card-img"><img src="/images/placeholder.svg" alt="Фото товару">
         <button class="card-cart">🛒</button>
       </div>
       <h3 class="card-title">Title</h3>
@@ -122,13 +126,10 @@
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__col">
-      <div class="logo">
-        <img src="/images/logo.svg" alt="eApteka" /><span>eApteka</span>
-      </div>
+      <div class="logo"><img src="/images/logo.svg" alt="eApteka"><span>eApteka</span></div>
       <p>Здоров’я поруч із вами</p>
       <p>м. Київ, Україна</p>
-      <p>+380 (44) 123-45-67</p>
-      <a href="mailto:info@eapteka.ua">info@eapteka.ua</a>
+      <p>+380 (44) 123-45-67</p><a href="mailto:info@eapteka.ua">info@eapteka.ua</a>
     </div>
     <div class="footer__col">
       <h4>Корисні посилання</h4>
