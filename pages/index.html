@@ -2,28 +2,154 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <title>Прототип LR5</title>
-    <link rel="stylesheet" href="/scss/main.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eApteka — інтернет-аптека</title>
+    <link rel="stylesheet" href="/src/scss/main.scss" />
   </head>
-  <body>
-    <header class="header">
-      <h1>Заголовок мого сайту</h1>
-      <!-- Додай розмітку заголовка відповідно до макету-->
-    </header>
-    <main class="content">
-      <section class="bouquet-section">
-        <h2>Акції</h2>
-        <!-- Додай елементи (картинки, кнопки тощо) з макету-->
-      </section>
-      <section class="template-section">
-        <h2>Всі ліки</h2>
-        <!-- Додай шаблони (висота 217px)-->
-      </section>
-    </main>
-    <footer class="footer">
-      <p>Підвал сайту © 2025</p>
-      <!-- Додай розмітку підвалу-->
-    </footer>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  <body></body>
 </html>
+<header class="header">
+  <div class="container">
+    <div class="header__logo">
+      <!-- <img src="/src/assets/images/logo_eApteka.png" /><span>eApteka</span> -->
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#promos">Акції</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="header__search">
+      <input type="text" placeholder="Пошук" />
+      <button type="button">🔍</button>
+    </div>
+    <div class="header__icons">
+      <button type="button">👤</button>
+      <button type="button">🛒</button>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero__content">
+    <img class="hero__img" src="/images/hero.png" alt="eApteka" />
+    <h1>eApteka</h1>
+    <p>Знайди ліки в нашому інтернет-магазині</p>
+  </div>
+</section>
+<section class="promos" id="promos">
+  <h2 class="section-title">Акції</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+  </div>
+</section>
+<section class="products">
+  <h2 class="section-title">Наші товари</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="/images/placeholder.svg" alt="Фото товару" />
+        <button class="card-cart">🛒</button>
+      </div>
+      <h3 class="card-title">Title</h3>
+      <p class="card-text">Body text for whatever you'd like to say...</p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__col">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="eApteka" /><span>eApteka</span>
+      </div>
+      <p>Здоров’я поруч із вами</p>
+      <p>м. Київ, Україна</p>
+      <p>+380 (44) 123-45-67</p>
+      <a href="mailto:info@eapteka.ua">info@eapteka.ua</a>
+    </div>
+    <div class="footer__col">
+      <h4>Корисні посилання</h4>
+      <ul>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Каталог товарів</a></li>
+        <li><a href="#">Доставка та оплата</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Ми у соцмережах</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 eApteka — Всі права захищено.</p>
+  </div>
+</footer>
+<script type="module" src="/src/main.ts"></script>

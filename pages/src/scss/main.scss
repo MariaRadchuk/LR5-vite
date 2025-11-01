@@ -1,51 +1,6 @@
-// Змінні для основних параметрів (згідно з макетом)
-$width: 1440px;
-$header-height: 240px;
-$footer-height: 186px;
-$bouquet-section-height: 227px;
-$template-section-height: 217px;
-$content-height: 594px;
+// src/scss/main.scss
+@use 'base/variables' as *;
+@use 'components/header' as *;
 
-// Базові стилі
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    max-width: $width;
-    margin: 0 auto;
-}
-
-.header {
-    height: $header-height;
-    background-color: #ffffff; // Заміни на колір із макету
-    text-align: center;
-}
-
-.content {
-    min-height: $content-height;
-    background-color: #F8FFFC; // Заміни на колір із макету
-}
-
-.bouquet-section {
-    height: $bouquet-section-height;
-    background-color: #F8FFFC; // Колір із макету
-    padding: 20px;
-}
-
-.template-section {
-    height: $template-section-height;
-    background-color: #F8FFFC; // Колір із макету
-    margin-bottom: 20px;
-}
-
-.footer {
-    height: $footer-height;
-    background-color: #ffffff; // Заміни на колір із макету
-    color: #000000;
-    text-align: center;
-    padding: 20px;
-}
+// Додаси інші компоненти пізніше:
+// @use 'components/hero' as *;

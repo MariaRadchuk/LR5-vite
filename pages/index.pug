@@ -2,10 +2,14 @@ doctype html
 html(lang="uk")
   head
     meta(charset="UTF-8")
-    title Прототип LR5
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title eApteka — інтернет-аптека
+    link(rel="stylesheet" href="/src/scss/main.scss")
   body
-    include ./components/header.pug
-    include ./components/content.pug
-    include ./components/footer.pug
+include ../components/header.pug
+include ../components/hero.pug
+include ../components/promo-section.pug
+include ../components/products-section.pug
+include ../components/footer.pug
 
-  script(type="module" src="/src/main.ts")
+script(type="module" src="/src/main.ts")

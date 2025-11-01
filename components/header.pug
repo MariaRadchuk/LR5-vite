@@ -1,3 +1,23 @@
+// components/header.pug
 header.header
-  h1 Заголовок мого сайту
-  // Додай розмітку заголовка відповідно до макету
+  .container
+    a.header__logo(href="/")
+      img(src="/src/assets/images/logo_eApteka.png" alt="eApteka")
+      span eApteka
+
+    nav.header__nav
+      ul
+        li: a(href="/") Головна
+        li: a(href="#promos") Акції
+        li: a(href="#contacts") Контакти
+
+    form.header__search(role="search")
+      input(type="text" placeholder="Пошук" aria-label="Пошук ліків")
+      button(type="submit")
+        | Search
+
+    .header__icons
+      button.header__user(type="button" aria-label="Профіль")
+        | User
+      button.header__cart(type="button" aria-label="Кошик")
+        | Cart
