@@ -3,7 +3,7 @@
 
 .header {
     background: #ffffff;
-    border-bottom: 1px solid #e8f5ed;
+    // border-bottom: 1px solid #e8f5ed;
     padding: 16px 20px;
     position: sticky;
     top: 0;
@@ -55,11 +55,11 @@
             padding-bottom: 8px;
 
             &:hover {
-                color: #2e9b5c;
+                color: #33945b;
             }
 
             &.active {
-                color: #2e9b5c;
+                color: #33945b;
                 font-weight: 600;
 
                 &::after {
@@ -84,7 +84,7 @@
         input {
             width: 100%;
             height: 40px;
-            padding: 0 10px 0 16px; 
+            padding: 0 0 0 16px; 
             border: 1px solid #d1e8d9;
             border-radius: 22px;
             background: #f5fbf8;
@@ -104,7 +104,7 @@
             transform: translateY(-50%);
             background: none;
             border: none;
-            color: #2e9b5c;
+            color: #33945b;
             cursor: pointer;
             padding: 6px;
             border-radius: 50%;
@@ -126,7 +126,7 @@
         button {
             background: none;
             border: none;
-            color: #2e9b5c;
+            color: #33945b;
             cursor: pointer;
             padding: 10px;
             border-radius: 50%;

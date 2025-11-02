@@ -1,28 +1,36 @@
-footer.footer
+// components/footer.pug
+footer.footer#contacts
   .footer__top
-    .footer__col
-      .logo
-        img(src="/images/logo.svg" alt="eApteka")
-        span eApteka
-      p Здоров’я поруч із вами
-      p м. Київ, Україна
-      p +380 (44) 123-45-67
-      a(href="mailto:info@eapteka.ua") info@eapteka.ua
+    .container
+      // КОЛОНКА 1 — ТІЛЬКИ ЛОГО
+      .footer__col.footer__col--logo
+        a.logo(href="/")
+          img(src="/src/assets/images/logo_eApteka.png" alt="eApteka")
 
-    .footer__col
-      h4 Корисні посилання
-      ul
-        li: a(href="#") Про нас
-        li: a(href="#") Каталог товарів
-        li: a(href="#") Доставка та оплата
-        li: a(href="#contacts") Контакти
+      // КОЛОНКА 2 — ІНФОРМАЦІЯ
+      .footer__col
+        p.footer__tagline Здоров’я поруч із вами
+        p.footer__address м. Київ, Україна
+        p.footer__phone +380 (44) 123-45-67
+        a.footer__email(href="mailto:info@eapteka.ua") info@eapteka.ua
 
-    .footer__col
-      h4 Ми у соцмережах
-      ul
-        li: a(href="#") Facebook
-        li: a(href="#") Instagram
-        li: a(href="#") Telegram
+      // КОЛОНКА 3 — ПОСИЛАННЯ
+      .footer__col
+        h4.footer__title Корисні посилання
+        ul.footer__list
+          li: a(href="#") Про нас
+          li: a(href="#") Каталог товарів
+          li: a(href="#") Доставка та оплата
+          li: a(href="#contacts") Контакти
+
+      // КОЛОНКА 4 — СОЦМЕРЕЖІ
+      .footer__col
+        h4.footer__title Ми у соцмережах
+        ul.footer__list.footer__social
+          li: a(href="#") Facebook
+          li: a(href="#") Instagram
+          li: a(href="#") Telegram
 
   .footer__bottom
-    p © 2025 eApteka — Всі права захищено.
+    .container
+      p © 2025 eApteka — Всі права захищено.
