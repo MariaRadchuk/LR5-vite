@@ -1,4 +1,4 @@
-// src/scss/components/hero.scss
+// src/scss/components/_hero.scss
 @use '../base/variables' as *;
 
 .hero {
@@ -19,15 +19,15 @@
     &__title {
         font-size: clamp(3.5rem, 8vw, 6rem);
         font-weight: 600;
-        color: #33945b;
-        margin: 0 0 16px;
+        color: $accent-hover;
+        margin: 0 0 $gap-xs;
         line-height: 1.1;
-        text-shadow: 0 10px 4px rgba(0, 0, 0, 0.05);
+        text-shadow: 0 10px 4px $shadow;
     }
 
     &__subtitle {
         font-size: 24px;
-        color: #555;
+        color: $text-light;
         margin: 0;
         line-height: 1.5;
         font-weight: 500;

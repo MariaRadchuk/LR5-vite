@@ -1,13 +1,51 @@
 // src/scss/base/variables.scss
 $width: 1440px;
-$header-height: 240px;
+$header-height: 64px;
 $footer-height: 186px;
 $bouquet-section-height: 227px;
 $template-section-height: 217px;
 $content-height: 594px;
 
+// КОЛЬОРИ
 $accent: #2e9b5c;
+$accent-hover: #33945b;
 $bg: #f8fffc;
+$bg-light: #f6fff9;
+$bg-card: #ffffff;
+$bg-footer-bottom: #e8f5ed;
 $white: #ffffff;
 $text: #333333;
+$text-light: #555;
+$text-lighter: #666;
+$text-muted: #777;
 $border: #e0e0e0;
+$border-light: #e8f5ed;
+$border-input: #d1e8d9;
+$shadow: rgba(0, 0, 0, 0.05);
+$shadow-hover: rgba(0, 0, 0, 0.1);
+
+// ШРИФТИ
+$font-base: 0.9375rem;
+$font-sm: 0.875rem;
+$font-lg: 1.125rem;
+$font-xl: 1.25rem;
+$font-title: 2.5rem;
+
+// ВІДСТУПИ
+$container-padding: 40px;
+$section-padding: 80px;
+$section-padding-mobile: 60px;
+$gap-lg: 60px;
+$gap-md: 40px;
+$gap-sm: 24px;
+$gap-xs: 16px;
+$gap-xxs: 12px;
+
+// РАДІУСИ
+$radius: 16px;
+$radius-sm: 8px;
+$radius-round: 50%;
+
+// ПЕРЕХОДИ
+$transition: all 0.3s ease;
+$transition-fast: all 0.2s ease;

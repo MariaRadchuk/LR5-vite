@@ -1,31 +1,31 @@
-// src/scss/components/cards.scss
+// src/scss/components/_cards.scss
 @use '../base/variables' as *;
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: $font-title;
     font-weight: 700;
-    color: #1a1a1a;
+    color: $text;
     text-align: center;
-    margin: 0 0 48px;
+    margin: 0 0 $gap-lg;
 }
 
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 0 40px;
+    gap: $gap-sm;
+    padding: 0 $container-padding;
 }
 
 .card {
-    background: #fff;
-    border-radius: 16px;
+    background: $bg-card;
+    border-radius: $radius;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px $shadow;
+    transition: $transition;
 
     &:hover {
         transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 12px 24px $shadow-hover;
     }
 
         &__image {
@@ -39,7 +39,6 @@
                 object-fit: cover;
             }
     
-            // ІКОНКА КОШИКА — СІРА ЗА ЗАМОВЧУВАННЯМ
             &::after {
                 content: '';
                 position: absolute;
@@ -55,7 +54,6 @@
                 transition: all 0.2s ease;
             }
     
-            // ПРИ HOVER — ЗЕЛЕНА
             &:hover::after {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%232e9b5c' stroke-width='2'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.5 12h11l2.5-12h4'/%3E%3C/svg%3E");
                 opacity: 1;
@@ -67,15 +65,15 @@
     }
 
     &__title {
-        font-size: 1.25rem;
+        font-size: $font-xl;
         font-weight: 600;
-        color: #1a1a1a;
-        margin: 0 0 12px;
+        color: $text;
+        margin: 0 0 $gap-xxs;
     }
 
     &__text {
-        font-size: 0.9375rem;
-        color: #666;
+        font-size: $font-base;
+        color: $text-lighter;
         line-height: 1.6;
         margin: 0;
     }
@@ -97,12 +95,12 @@
 @media (max-width: 768px) {
     .section-title {
         font-size: 2rem;
-        margin-bottom: 32px;
+        margin-bottom: $gap-md;
     }
 
     .cards-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: $gap-xs;
         padding: 0 20px;
     }
 
@@ -112,15 +110,15 @@
         }
 
         &__body {
-            padding: 16px;
+            padding: $gap-xs;
         }
 
         &__title {
-            font-size: 1.125rem;
+            font-size: $font-lg;
         }
 
         &__text {
-            font-size: 0.875rem;
+            font-size: $font-sm;
         }
     }
 }

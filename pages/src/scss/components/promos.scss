@@ -1,9 +1,11 @@
-// src/scss/components/promos.scss
+// src/scss/components/_promos.scss
+@use '../base/variables' as *;
+
 .promos {
-    padding: 80px 0;
-    background: #f6fff9;
+    padding: $section-padding 0;
+    background: $bg-light;
 
     @media (max-width: 768px) {
-        padding: 60px 0;
+        padding: $section-padding-mobile 0;
     }
 }
