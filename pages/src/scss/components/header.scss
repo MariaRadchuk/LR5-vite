@@ -1,5 +1,6 @@
 // src/scss/components/_header.scss
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .header {
     background: $bg-card;
@@ -9,8 +10,7 @@
     z-index: 1000;
 
     .container {
-        max-width: $width;
-        margin: 0 auto;
+@include container;
         display: flex;
         align-items: center;
         justify-content: space-between;

@@ -1,11 +1,8 @@
 // src/scss/components/_products.scss
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .products {
-    padding: $section-padding 0;
-    background: $bg-light;
+@include section($bg-light);
 
-    @media (max-width: 768px) {
-        padding: $section-padding-mobile 0;
-    }
 }

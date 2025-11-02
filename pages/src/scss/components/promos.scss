@@ -1,11 +1,8 @@
 // src/scss/components/_promos.scss
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .promos {
-    padding: $section-padding 0;
-    background: $bg-light;
+@include section($bg-light);
 
-    @media (max-width: 768px) {
-        padding: $section-padding-mobile 0;
-    }
 }

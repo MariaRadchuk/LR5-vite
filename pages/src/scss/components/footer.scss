@@ -1,5 +1,6 @@
 // src/scss/components/_footer.scss
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .footer {
     background: $bg-card;
@@ -8,9 +9,7 @@
     font-size: $font-base;
 
     .container {
-        max-width: $width;
-        margin: 0 auto;
-        padding: 0 $container-padding;
+@include container;
     }
 
     &__top {

@@ -1,5 +1,6 @@
 // src/scss/components/_cards.scss
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .section-title {
     font-size: $font-title;
@@ -24,8 +25,7 @@
     transition: $transition;
 
     &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px $shadow-hover;
+@include card-hover;
     }
 
         &__image {
@@ -69,6 +69,7 @@
         font-weight: 600;
         color: $text;
         margin: 0 0 $gap-xxs;
+        @include text-ellipsis;
     }
 
     &__text {

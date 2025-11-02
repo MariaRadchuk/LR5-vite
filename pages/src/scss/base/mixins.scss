@@ -1,0 +1,32 @@
+// src/scss/base/_mixins.scss
+@use './variables' as *;
+
+// 1. МІКСИН: КОНТЕЙНЕР (центрування + падінги)
+@mixin container {
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+// 2. МІКСИН: СЕКЦІЯ (відступи зверху/знизу)
+@mixin section($bg: transparent) {
+    padding: $section-padding 0;
+    background: $bg;
+
+    @media (max-width: 768px) {
+        padding: $section-padding-mobile 0;
+    }
+}
+
+// 3. БОНУС: HOVER ЕФЕКТ ДЛЯ КАРТОК
+@mixin card-hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px $shadow-hover;
+}
+
+// 4. БОНУС: ТЕКСТ-ЕЛІПСИС (обрізання довгого тексту)
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
