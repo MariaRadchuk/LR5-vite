@@ -24,6 +24,21 @@
     box-shadow: 0 4px 12px $shadow;
     transition: $transition;
 
+    &__badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #e73c3f;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
     &:hover {
         @include card-hover;
     }
@@ -78,6 +93,25 @@
         line-height: 1.6;
         margin: 0;
     }
+        &__price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            font-size: 1rem;
+        }
+    
+        &__price-old {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 0.875rem;
+        }
+    
+        &__price-new {
+            color: #2e9b5c;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
 }
 
 // === АДАПТИВНІСТЬ ===

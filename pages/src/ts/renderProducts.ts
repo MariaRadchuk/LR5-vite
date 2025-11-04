@@ -1,26 +1,35 @@
 // pages/src/ts/renderProducts.ts
 import type { Products } from '../types/product';
-import rawProducts from '../data/products.json';
 
-const products: Products = rawProducts as unknown as Products;
-
-export function renderProducts(container: HTMLElement, items: Products = products) {
+export function renderProducts(container: HTMLElement, items: Products) {
   container.innerHTML = '';
 
   items.forEach(product => {
     const card = document.createElement('div');
-    card.className = 'promos__item';
+    card.className = 'card';
     card.dataset.id = product.id.toString();
 
+    const promoBadge = product.isPromo
+      ? '<div class="card__badge">Акція</div>'
+      : '';
+
+    const priceHTML = product.isPromo && product.oldPrice
+      ? `
+        <p class="card__price">
+          <span class="card__price-old">${product.oldPrice} ₴</span>
+          <span class="card__price-new">${product.price} ₴</span>
+        </p>
+      `
+      : `<p class="card__text">${product.price} ₴</p>`;
+
     card.innerHTML = `
-      <div class="card">
-        <div class="card__image">
-          <img src="${product.image}" alt="${product.title}">
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">${product.title}</h3>
-          <p class="card__text">${product.price} ₴</p>
-        </div>
+      <div class="card__image">
+        ${promoBadge}
+        <img src="${product.image}" alt="${product.title}">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">${product.title}</h3>
+        ${priceHTML}
       </div>
     `;
 

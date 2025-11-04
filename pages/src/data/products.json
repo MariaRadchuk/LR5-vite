@@ -1,38 +1,122 @@
 [
   {
     "id": 1,
-    "title": "Парацетамол 500мг",
-    "price": 25,
-    "image": "/src/assets/images/paracetamol.jpg"
+    "title": "Аспірин Кардіо 100 мг №30",
+    "price": 125,
+    "image": "/src/assets/images/prod1.jpg"
   },
   {
     "id": 2,
-    "title": "Вітамін C 1000мг",
-    "price": 150,
-    "image": "/src/assets/images/vitamin-c.jpg"
+    "title": "Вітамін D3 1000 МО №60",
+    "price": 189,
+    "image": "/src/assets/images/prod2.jpg"
   },
   {
     "id": 3,
-    "title": "Ібупрофен 400мг",
-    "price": 45,
-    "image": "/src/assets/images/ibuprofen.jpg"
+    "title": "Омепразол 20 мг №28",
+    "price": 210,
+    "image": "/src/assets/images/prod3.jpg"
   },
   {
     "id": 4,
-    "title": "Аспірин 100мг",
-    "price": 35,
-    "image": "/src/assets/images/aspirin.jpg"
+    "title": "Лоратадин 10 мг №10",
+    "price": 67,
+    "image": "/src/assets/images/prod4.jpg"
   },
   {
     "id": 5,
-    "title": "Амоксицилін 500мг",
-    "price": 80,
-    "image": "/src/assets/images/amoxicillin.jpg"
+    "title": "Амоксицилін 500 мг №20",
+    "price": 156,
+    "image": "/src/assets/images/prod5.jpg"
   },
   {
     "id": 6,
-    "title": "Лоратадин 10мг",
-    "price": 60,
-    "image": "/src/assets/images/loratadine.jpg"
+    "title": "Кетонал 100 мг №20",
+    "price": 198,
+    "image": "/src/assets/images/prod6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Бісопролол 5 мг №30",
+    "price": 134,
+    "image": "/src/assets/images/prod7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Магне-В6 №60",
+    "price": 245,
+    "image": "/src/assets/images/prod8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Смекта №10",
+    "price": 98,
+    "image": "/src/assets/images/prod9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Лінекс №16",
+    "price": 278,
+    "image": "/src/assets/images/prod10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Фестал №20",
+    "price": 112,
+    "image": "/src/assets/images/prod11.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Нурофен 200 мг №24",
+    "price": 165,
+    "image": "/src/assets/images/prod12.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Кальцій-Д3 №30",
+    "price": 189,
+    "image": "/src/assets/images/prod13.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Гліцин 100 мг №50",
+    "price": 78,
+    "image": "/src/assets/images/prod14.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Еналаприл 10 мг №30",
+    "price": 145,
+    "image": "/src/assets/images/prod15.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Ранітидин 150 мг №20",
+    "price": 96,
+    "image": "/src/assets/images/prod16.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Амлодипін 5 мг №30",
+    "price": 168,
+    "image": "/src/assets/images/prod17.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Панкреатин №20",
+    "price": 87,
+    "image": "/src/assets/images/prod18.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Супрастин 25 мг №20",
+    "price": 134,
+    "image": "/src/assets/images/prod19.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Цитрамон №10",
+    "price": 45,
+    "image": "/src/assets/images/prod20.jpg"
   }
 ]

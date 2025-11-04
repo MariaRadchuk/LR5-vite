@@ -4,5 +4,36 @@
 
 .promos {
 @include section($bg-light);
+        .section-title {
+            margin-bottom: 24px;
+        }
 
-}
+        .cards-grid {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 16px 0;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 16px;
+
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f0f7f3;
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #2e9b5c;
+                border-radius: 4px;
+            }
+
+            .card {
+                flex: 0 0 280px; // ФІКСОВАНА ШИРИНА
+                scroll-snap-align: start;
+                min-width: 280px;
+            }
+        }
+    }

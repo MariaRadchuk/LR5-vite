@@ -1,0 +1,65 @@
+[
+  {
+    "id": 101,
+    "title": "Парацетамол 500 мг №10",
+    "price": 29,
+    "oldPrice": 49,
+    "image": "/src/assets/images/promo1.jpg",
+    "isPromo": true,
+    "requiresPrescription": false
+  },
+  {
+    "id": 102,
+    "title": "Ібупрофен 400 мг №20",
+    "price": 45,
+    "oldPrice": 79,
+    "image": "/src/assets/images/promo2.jpg",
+    "isPromo": true,
+    "requiresPrescription": true
+  },
+  {
+    "id": 103,
+    "title": "Но-шпа 40 мг №24",
+    "price": 89,
+    "oldPrice": 139,
+    "image": "/src/assets/images/promo3.jpg",
+      "isPromo": true,
+    "requiresPrescription": true
+  },
+  {
+    "id": 104,
+    "title": "Аспірин 500 мг №20",
+    "price": 55,
+    "oldPrice": 89,
+    "image": "/src/assets/images/promo4.jpg",
+      "isPromo": true,
+      "requiresPrescription": true
+  },
+  {
+    "id": 105,
+    "title": "Смекта №10",
+    "price": 79,
+    "oldPrice": 119,
+    "image": "/src/assets/images/promo5.jpg",
+      "isPromo": true,
+    "requiresPrescription": true
+  },
+  {
+    "id": 106,
+    "title": "Лінекс №16",
+    "price": 199,
+    "oldPrice": 299,
+    "image": "/src/assets/images/promo6.jpg",
+      "isPromo": true,
+    "requiresPrescription": false
+  },
+  {
+    "id": 107,
+    "title": "Вітамін C 1000 мг №30",
+    "price": 119,
+    "oldPrice": 179,
+    "image": "/src/assets/images/promo7.jpg",
+      "isPromo": true,
+    "requiresPrescription": true
+  }
+]
