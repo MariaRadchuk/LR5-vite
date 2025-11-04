@@ -14,6 +14,13 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    /* ДОДАЄМО: для JSON + типів */
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+
+    /* ДОДАЄМО: бачити src/types */
+    "typeRoots": ["./node_modules/@types", "./pages/src/types"],
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -22,5 +29,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["pages/src"]
+  "include": [
+    "pages/src/**/*",
+    "pages/src/types/**/*.d.ts"
+  ]
 }

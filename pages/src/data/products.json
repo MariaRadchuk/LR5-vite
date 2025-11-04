@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Парацетамол 500мг",
+    "price": 25,
+    "image": "/src/assets/images/paracetamol.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Вітамін C 1000мг",
+    "price": 150,
+    "image": "/src/assets/images/vitamin-c.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Ібупрофен 400мг",
+    "price": 45,
+    "image": "/src/assets/images/ibuprofen.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Аспірин 100мг",
+    "price": 35,
+    "image": "/src/assets/images/aspirin.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Амоксицилін 500мг",
+    "price": 80,
+    "image": "/src/assets/images/amoxicillin.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Лоратадин 10мг",
+    "price": 60,
+    "image": "/src/assets/images/loratadine.jpg"
+  }
+]

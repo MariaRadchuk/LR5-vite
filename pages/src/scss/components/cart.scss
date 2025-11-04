@@ -1,0 +1,200 @@
+// src/scss/components/cart.scss
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+
+    &.open {
+        display: flex;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    &__content {
+        position: relative;
+        background: $bg-card;
+        border-radius: $radius;
+        width: 90%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #999;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        &:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $text;
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        background: #f8fffb;
+        border-radius: $radius-sm;
+        border: 1px solid #e8f5ed;
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: $radius-sm;
+        }
+
+        .item-info {
+            flex: 1;
+
+            h4 {
+                margin: 0 0 4px;
+                font-size: 1rem;
+                color: $text;
+            }
+
+            p {
+                margin: 0;
+                font-size: 0.875rem;
+                color: $accent-hover;
+                font-weight: 600;
+            }
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            button {
+                width: 32px;
+                height: 32px;
+                border: 1px solid #ddd;
+                background: white;
+                border-radius: 50%;
+                font-size: 16px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background: $accent;
+                    color: white;
+                    border-color: $accent;
+                }
+            }
+
+            span {
+                min-width: 24px;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+
+        .item-remove {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 18px;
+
+            &:hover {
+                color: #e74c3c;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    &__total {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $text;
+
+        strong {
+            color: $accent-hover;
+            margin-left: 8px;
+        }
+    }
+
+    .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition;
+
+        &--secondary {
+            background: #f0f7f3;
+            color: $text;
+            border: none;
+
+            &:hover {
+                background: #e0f0e6;
+            }
+        }
+
+        &--primary {
+            background: $accent;
+            color: white;
+            border: none;
+
+            &:hover {
+                background: $accent-hover;
+            }
+        }
+    }
+}
