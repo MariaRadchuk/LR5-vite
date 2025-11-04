@@ -7,4 +7,5 @@
 @use 'components/promos' as *;
 @use 'components/products' as *;
 @use 'components/footer' as *;
-@use 'components/cart';
+@use 'components/cart' as *;
+@use 'components/prescription-alert.scss' as *;

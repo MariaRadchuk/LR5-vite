@@ -1,0 +1,62 @@
+// src/scss/components/_prescription-alert.scss
+.prescription-alert {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    backdrop-filter: blur(4px);
+
+    &.open {
+        display: flex;
+    }
+
+    &__content {
+        background: white;
+        padding: 32px 24px;
+        border-radius: 16px;
+        max-width: 90%;
+        width: 380px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        animation: popup 0.3s ease-out;
+
+        p {
+            margin: 0 0 20px;
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+    }
+
+    &__close {
+        background: #2e9b5c;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background: #268a4f;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

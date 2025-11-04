@@ -141,23 +141,52 @@ export function initCart() {
   const cart = new Cart();
 
   // У файлі initCart() — ОНОВЛЕНО
+// У файлі cart.ts → initCart()
 document.addEventListener('click', (e) => {
   const img = (e.target as HTMLElement).closest('.card__image');
-  if (img) {
-    const card = img.closest('.card') as HTMLElement;
-    const id = parseInt(card.dataset.id || Date.now().toString());
-    const title = card.querySelector('.card__title')?.textContent || 'Товар';
+  if (!img) return;
 
-    // БЕРЕМО НОВУ ЦІНУ — З .card__price-new АБО .card__text
-    const newPriceEl = card.querySelector('.card__price-new');
-    const priceTextEl = card.querySelector('.card__text');
-    const price = newPriceEl
-      ? parseInt(newPriceEl.textContent!.replace(' ₴', ''))
-      : parseInt(priceTextEl?.textContent!.replace(' ₴', '') || '0');
+  const card = img.closest('.card') as HTMLElement;
+  const id = parseInt(card.dataset.id || Date.now().toString());
+  const title = card.querySelector('.card__title')?.textContent || 'Товар';
 
-    const image = (card.querySelector('img') as HTMLImageElement)?.src || '';
+  // ЦІНА
+  const priceEl = card.querySelector('.card__price-new') || card.querySelector('.card__text');
+  const price = parseInt(priceEl?.textContent?.replace(' ₴', '') || '0');
+  const image = (card.querySelector('img') as HTMLImageElement)?.src || '';
 
-    cart.toggleItem(id, title, price, image); // НОВА ЦІНА!
+  // ПЕРЕВІРКА РЕЦЕПТУ
+  const requiresPrescription = card.dataset.requiresPrescription === 'true';
+
+  if (requiresPrescription) {
+    showPrescriptionAlert();
+    return; // НЕ ДОДАЄМО В КОШИК
   }
+
+  cart.toggleItem(id, title, price, image);
 });
+
+// ФУНКЦІЯ ПОВІДОМЛЕННЯ
+function showPrescriptionAlert() {
+  const alert = document.getElementById('prescription-alert') as HTMLElement;
+  if (!alert) return;
+
+  alert.classList.add('open');
+
+  const closeBtn = alert.querySelector('.prescription-alert__close') as HTMLButtonElement;
+  const closeHandler = () => {
+    alert.classList.remove('open');
+    closeBtn.removeEventListener('click', closeHandler);
+  };
+  closeBtn.addEventListener('click', closeHandler);
+
+  // Закрити при кліку поза
+  const overlayHandler = (e: MouseEvent) => {
+    if (e.target === alert) {
+      alert.classList.remove('open');
+      alert.removeEventListener('click', overlayHandler);
+    }
+  };
+  alert.addEventListener('click', overlayHandler);
+}
 }

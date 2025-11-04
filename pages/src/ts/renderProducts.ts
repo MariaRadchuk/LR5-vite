@@ -9,10 +9,17 @@ export function renderProducts(container: HTMLElement, items: Products) {
     card.className = 'card';
     card.dataset.id = product.id.toString();
 
+    // ДОДАЄМО data-requires-prescription
+    if (product.requiresPrescription) {
+      card.dataset.requiresPrescription = 'true';
+    }
+
+    // БЕЙДЖ АКЦІЇ
     const promoBadge = product.isPromo
       ? '<div class="card__badge">Акція</div>'
       : '';
 
+    // ЦІНА: стара + нова (тільки для акцій)
     const priceHTML = product.isPromo && product.oldPrice
       ? `
         <p class="card__price">
@@ -22,6 +29,7 @@ export function renderProducts(container: HTMLElement, items: Products) {
       `
       : `<p class="card__text">${product.price} ₴</p>`;
 
+    // ОСНОВНА РОЗМІТКА КАРТКИ
     card.innerHTML = `
       <div class="card__image">
         ${promoBadge}
