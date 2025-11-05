@@ -4,6 +4,11 @@
 
 .promos {
 @include section($bg-light);
+    border: 6px solid #cce8de; // товщина 2px, зелений колір
+    border-radius: 18px; 
+    padding: 16px;
+    margin-top: 40px;
+
         .section-title {
             margin-bottom: 24px;
         }

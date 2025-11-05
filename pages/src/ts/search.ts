@@ -2,22 +2,35 @@
 import type { Products } from '../types/product';
 import { renderProducts } from './renderProducts';
 
-// Кеш даних
+// Кеш
 let allProducts: Products = [];
 let promoProducts: Products = [];
 
 // Контейнери
 const productsContainer = document.querySelector('.products .cards-grid') as HTMLElement | null;
 const promoContainer = document.querySelector('.promos .cards-grid') as HTMLElement | null;
-
-// Секції
 const productsSection = document.querySelector('.products') as HTMLElement | null;
 const promoSection = document.querySelector('.promos') as HTMLElement | null;
 
-export function initSearch(
-  allData: Products,
-  promoData: Products
-) {
+// НОВЕ: спільний контейнер для повідомлення
+const searchEmptyContainer = document.createElement('div');
+searchEmptyContainer.className = 'search-empty-container';
+searchEmptyContainer.innerHTML = `
+  <div class="search-empty-content">
+    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5">
+      <circle cx="11" cy="11" r="8"/>
+      <path d="m21 21-4.35-4.35"/>
+    </svg>
+    <h3>Нічого не знайдено</h3>
+    <p>Спробуйте змінити запит або перевірити написання</p>
+  </div>
+`;
+
+// Вставляємо після .products (або перед .promos)
+const mainContent = document.querySelector('main') || document.body;
+mainContent.insertBefore(searchEmptyContainer, promoSection);
+
+export function initSearch(allData: Products, promoData: Products) {
   allProducts = allData;
   promoProducts = promoData;
 
@@ -42,9 +55,22 @@ function performSearch(query: string) {
 
   const filteredAll = filterAndHighlight(allProducts, query);
   const filteredPromo = filterAndHighlight(promoProducts, query);
+  const totalFound = filteredAll.length + filteredPromo.length;
 
-  updateSection('products', productsSection, productsContainer, filteredAll, 'Немає товарів за запитом');
-  updateSection('promos', promoSection, promoContainer, filteredPromo, 'Немає акційних товарів');
+  // СХОВАТИ СЕКЦІЇ
+  hideAllSections();
+
+  if (totalFound === 0) {
+    showEmptyMessage();
+  } else {
+    hideEmptyMessage();
+    if (filteredAll.length > 0) {
+      renderSection(productsSection, productsContainer, filteredAll);
+    }
+    if (filteredPromo.length > 0) {
+      renderSection(promoSection, promoContainer, filteredPromo);
+    }
+  }
 }
 
 function filterAndHighlight(products: Products, query: string): Products {
@@ -61,43 +87,30 @@ function filterAndHighlight(products: Products, query: string): Products {
     .filter((p): p is NonNullable<typeof p> => p !== null);
 }
 
-function updateSection(
-  type: 'products' | 'promos',
-  section: HTMLElement | null,
-  container: HTMLElement | null,
-  items: Products,
-  emptyMessage: string
-) {
+function renderSection(section: HTMLElement | null, container: HTMLElement | null, items: Products) {
   if (!section || !container) return;
 
-  // Очищаємо
   container.innerHTML = '';
-
-  if (items.length === 0) {
-    container.innerHTML = `<p class="search-empty">${emptyMessage}</p>`;
-  } else {
-    renderProducts(container, items);
-  }
-
-  // Показуємо секцію
+  renderProducts(container, items);
   section.style.display = 'block';
+}
 
-  // Приховуємо, якщо нічого не знайдено і є результати в іншій секції
-  const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
-  const hasQuery = searchInput?.value.trim();
+function hideAllSections() {
+  if (productsSection) productsSection.style.display = 'none';
+  if (promoSection) promoSection.style.display = 'none';
+  hideEmptyMessage();
+}
 
-  if (!hasQuery) return;
+function showEmptyMessage() {
+  searchEmptyContainer.style.display = 'block';
+}
 
-  const otherContainer = type === 'products' ? promoContainer : productsContainer;
-  const hasOtherResults = otherContainer && otherContainer.children.length > 0 && 
-                          !otherContainer.querySelector('.search-empty');
-
-  if (items.length === 0 && hasOtherResults) {
-    section.style.display = 'none';
-  }
+function hideEmptyMessage() {
+  searchEmptyContainer.style.display = 'none';
 }
 
 function resetAll() {
+  hideEmptyMessage();
   if (productsContainer) renderProducts(productsContainer, allProducts);
   if (promoContainer) renderProducts(promoContainer, promoProducts);
   if (productsSection) productsSection.style.display = 'block';
