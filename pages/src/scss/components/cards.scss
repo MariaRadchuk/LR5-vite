@@ -16,7 +16,15 @@
     gap: $gap-sm;
     padding: 0 $container-padding;
 }
-
+// src/scss/components/_cards.scss
+.card__title {
+    mark {
+        background: #fff3cd;
+        color: #d39e00;
+        padding: 0 2px;
+        border-radius: 3px;
+    }
+}
 .card {
     background: $bg-card;
     border-radius: $radius;

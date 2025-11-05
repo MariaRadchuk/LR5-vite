@@ -30,16 +30,17 @@ export function renderProducts(container: HTMLElement, items: Products) {
       : `<p class="card__text">${product.price} ₴</p>`;
 
     // ОСНОВНА РОЗМІТКА КАРТКИ
-    card.innerHTML = `
-      <div class="card__image">
-        ${promoBadge}
-        <img src="${product.image}" alt="${product.title}">
-      </div>
-      <div class="card__body">
-        <h3 class="card__title">${product.title}</h3>
-        ${priceHTML}
-      </div>
-    `;
+// src/ts/renderProducts.ts
+card.innerHTML = `
+  <div class="card__image">
+    ${promoBadge}
+    <img src="${product.image}" alt="${product.title.replace(/<[^>]*>/g, '')}">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title">${product.title}</h3>
+    ${priceHTML}
+  </div>
+`;
 
     container.appendChild(card);
   });
