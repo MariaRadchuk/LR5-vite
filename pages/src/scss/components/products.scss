@@ -3,6 +3,7 @@
 @use '../base/mixins' as *;
 
 .products {
-@include section($bg-light);
+// @include section($bg-light);
+padding-top: 55px;
 
 }

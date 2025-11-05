@@ -1,0 +1,9 @@
+// src/scss/components/_search.scss
+.search-empty {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 40px 20px;
+    margin: 0;
+    grid-column: 1 / -1;
+}
