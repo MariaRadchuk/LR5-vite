@@ -10,9 +10,9 @@ export function renderProducts(container: HTMLElement, items: Products) {
     card.dataset.id = product.id.toString();
 
     // ДОДАЄМО data-requires-prescription
-    if (product.requiresPrescription) {
-      card.dataset.requiresPrescription = 'true';
-    }
+if (product.requiresPrescription) {
+  card.dataset.requiresPrescription = 'true';
+}
 
     // БЕЙДЖ АКЦІЇ
     const promoBadge = product.isPromo

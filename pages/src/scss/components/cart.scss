@@ -199,3 +199,62 @@
         }
     }
 }
+
+.item-quantity {
+    button {
+
+        &.disabled,
+        &[disabled] {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+            background: #eee;
+            color: #999;
+        }
+    }
+}
+
+.item-quantity {
+    button {
+
+        &.disabled,
+        &[disabled] {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+            background: #eee;
+            color: #999;
+        }
+    }
+
+    // 🔹 Стилі для поля введення кількості
+    .qty-input {
+        width: 50px;
+        height: 32px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #d3e8da;
+        border-radius: 6px;
+        background: #ffffff;
+        color: $text;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+
+        &:focus {
+            border-color: $accent;
+            box-shadow: 0 0 0 2px rgba($accent, 0.15);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
