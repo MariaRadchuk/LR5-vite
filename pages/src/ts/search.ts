@@ -12,7 +12,10 @@ const promoContainer = document.querySelector('.promos .cards-grid') as HTMLElem
 const productsSection = document.querySelector('.products') as HTMLElement | null;
 const promoSection = document.querySelector('.promos') as HTMLElement | null;
 
-// НОВЕ: спільний контейнер для повідомлення
+// НОВЕ: HERO
+const heroSection = document.querySelector('.hero') as HTMLElement | null;
+
+// Спільне повідомлення
 const searchEmptyContainer = document.createElement('div');
 searchEmptyContainer.className = 'search-empty-container';
 searchEmptyContainer.innerHTML = `
@@ -25,8 +28,6 @@ searchEmptyContainer.innerHTML = `
     <p>Спробуйте змінити запит або перевірити написання</p>
   </div>
 `;
-
-// Вставляємо після .products (або перед .promos)
 const mainContent = document.querySelector('main') || document.body;
 mainContent.insertBefore(searchEmptyContainer, promoSection);
 
@@ -56,6 +57,9 @@ function performSearch(query: string) {
   const filteredAll = filterAndHighlight(allProducts, query);
   const filteredPromo = filterAndHighlight(promoProducts, query);
   const totalFound = filteredAll.length + filteredPromo.length;
+
+  // ПРИХОВУЄМО HERO
+  if (heroSection) heroSection.style.display = 'none';
 
   // СХОВАТИ СЕКЦІЇ
   hideAllSections();
@@ -111,6 +115,10 @@ function hideEmptyMessage() {
 
 function resetAll() {
   hideEmptyMessage();
+
+  // ПОВЕРТАЄМО HERO
+  if (heroSection) heroSection.style.display = 'block';
+
   if (productsContainer) renderProducts(productsContainer, allProducts);
   if (promoContainer) renderProducts(promoContainer, promoProducts);
   if (productsSection) productsSection.style.display = 'block';
