@@ -1,0 +1,45 @@
+// src/scss/components/scroll-top.scss
+#scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    background: #2e9b5c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(46, 155, 92, 0.3);
+
+    &:hover {
+        background: #268a4f;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(46, 155, 92, 0.4);
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg {
+        stroke: white;
+    }
+}
+
+@media (max-width: 768px) {
+    #scroll-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}

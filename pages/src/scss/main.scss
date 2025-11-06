@@ -9,4 +9,5 @@
 @use 'components/footer' as *;
 @use 'components/cart' as *;
 @use 'components/prescription-alert' as *;
-@use 'components/search';
+@use 'components/search' as *; 
+@use 'components/scroll-top' as *;

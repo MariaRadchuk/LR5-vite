@@ -6,9 +6,11 @@ import { initSearch } from './ts/search';
 import promoData from './data/promo.json';
 import productsData from './data/products.json';
 import type { Products } from './types/product';
+import { initScrollToTop } from './ts/scrollTop';
 
 initCart();
 initSearch(productsData as unknown as Products, promoData as unknown as Products);
+initScrollToTop();
 
 // Рендер
 const promoGrid = document.querySelector('.promos .cards-grid') as HTMLElement | null;
