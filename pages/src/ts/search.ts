@@ -1,21 +1,18 @@
-// pages/src/ts/search.ts
+// pages/src/ts/search.ts  пошук
 import type { Products } from '../types/product';
 import { renderProducts } from './renderProducts';
 
-// Кеш
 let allProducts: Products = [];
 let promoProducts: Products = [];
 
-// Контейнери
 const productsContainer = document.querySelector('.products .cards-grid') as HTMLElement | null;
 const promoContainer = document.querySelector('.promos .cards-grid') as HTMLElement | null;
 const productsSection = document.querySelector('.products') as HTMLElement | null;
 const promoSection = document.querySelector('.promos') as HTMLElement | null;
 
-// НОВЕ: HERO
+// hero никає
 const heroSection = document.querySelector('.hero') as HTMLElement | null;
 
-// Спільне повідомлення
 const searchEmptyContainer = document.createElement('div');
 searchEmptyContainer.className = 'search-empty-container';
 searchEmptyContainer.innerHTML = `
@@ -47,7 +44,7 @@ export function initSearch(allData: Products, promoData: Products) {
 
   form.addEventListener('submit', (e) => e.preventDefault());
 }
-
+//виконує пошук 
 function performSearch(query: string) {
   if (!query) {
     resetAll();
@@ -76,7 +73,7 @@ function performSearch(query: string) {
     }
   }
 }
-
+// фільтрація + підсвічення збігів 
 function filterAndHighlight(products: Products, query: string): Products {
   return products
     .map(product => {
@@ -90,7 +87,7 @@ function filterAndHighlight(products: Products, query: string): Products {
     })
     .filter((p): p is NonNullable<typeof p> => p !== null);
 }
-
+//малює секцію
 function renderSection(section: HTMLElement | null, container: HTMLElement | null, items: Products) {
   if (!section || !container) return;
 
@@ -98,7 +95,7 @@ function renderSection(section: HTMLElement | null, container: HTMLElement | nul
   renderProducts(container, items);
   section.style.display = 'block';
 }
-
+//ховає секції
 function hideAllSections() {
   if (productsSection) productsSection.style.display = 'none';
   if (promoSection) promoSection.style.display = 'none';
@@ -112,11 +109,10 @@ function showEmptyMessage() {
 function hideEmptyMessage() {
   searchEmptyContainer.style.display = 'none';
 }
-
+// повертає все 
 function resetAll() {
   hideEmptyMessage();
 
-  // ПОВЕРТАЄМО HERO
   if (heroSection) heroSection.style.display = 'block';
 
   if (productsContainer) renderProducts(productsContainer, allProducts);

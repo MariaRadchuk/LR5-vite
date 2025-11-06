@@ -1,6 +1,6 @@
+// src/cart.ts КОШИК
 import type { Product } from "./types/product";
 
-// src/cart.ts
 interface CartItem {
   id: number;
   title: string;
@@ -37,12 +37,12 @@ class Cart {
       if (e.target === this.modal) this.close();
     });
 
-    // ✅ кнопка "Продовжити покупки"
+    // кнопка "Продовжити покупки"
     const continueBtn = document.querySelector('.btn--secondary') as HTMLButtonElement;
     if (continueBtn) {
       continueBtn.addEventListener('click', () => {
         this.close();
-        // якщо користувач не на головній — повернути туди
+        // повернути на головну
         if (window.location.pathname !== '/') {
           window.location.href = '/';
         }
@@ -60,17 +60,17 @@ class Cart {
       if (target.classList.contains('item-remove')) this.remove(id);
     });
   }
-
+  // відкрити модалку
   open() {
     this.modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
+  // закрити
   close() {
     this.modal.classList.remove('open');
     document.body.style.overflow = '';
   }
-
+  // Додати/видалити товар з кошика
   toggleItem(id: number, title: string, price: number, image: string, requiresPrescription: boolean = false) {
   const existing = this.items.find(i => i.id === id);
   if (existing) {
@@ -87,7 +87,8 @@ class Cart {
   }
   this.save();
   this.render();
-}
+  }
+  // Змінити кількість
   changeQty(id: number, delta: number) {
     const item = this.items.find(i => i.id === id);
     if (!item) return;
@@ -104,6 +105,7 @@ class Cart {
     this.render();
   }
 
+  // Видалити товар
   remove(id: number) {
     this.items = this.items.filter((i) => i.id !== id);
     this.save();
@@ -152,7 +154,7 @@ class Cart {
 
   this.totalElement.textContent = `${total} ₴`;
 
-  // ✅ Додаємо слухачі для ручного вводу
+  // Додаємо для ручного вводу
   this.itemsContainer.querySelectorAll('.qty-input').forEach(input => {
     input.addEventListener('change', (e) => {
       const target = e.target as HTMLInputElement;
@@ -186,12 +188,10 @@ class Cart {
   }
 }
 
-// ініціалізація
 export function initCart() {
   const cart = new Cart();
 
-  // У файлі initCart() — ОНОВЛЕНО
-// У файлі cart.ts → initCart()
+  // Додаємо товар при кліку на картку
 document.addEventListener('click', (e) => {
   const img = (e.target as HTMLElement).closest('.card__image');
   if (!img) return;
@@ -204,7 +204,6 @@ document.addEventListener('click', (e) => {
   const price = parseInt(priceEl?.textContent?.replace(' ₴', '') || '0');
   const image = (card.querySelector('img') as HTMLImageElement)?.src || '';
 
-  // ОТРИМУЄМО requiresPrescription
   const requiresPrescription = card.dataset.requiresPrescription === 'true';
 
   if (requiresPrescription) {
@@ -212,11 +211,10 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-  // ПЕРЕДАЄМО В toggleItem
   cart.toggleItem(id, title, price, image, requiresPrescription);
 });
 
-// ФУНКЦІЯ ПОВІДОМЛЕННЯ
+// Блокування для рецептурних ліків
 function showPrescriptionAlert() {
   const alert = document.getElementById('prescription-alert') as HTMLElement;
   if (!alert) return;
@@ -230,7 +228,6 @@ function showPrescriptionAlert() {
   };
   closeBtn.addEventListener('click', closeHandler);
 
-  // Закрити при кліку поза
   const overlayHandler = (e: MouseEvent) => {
     if (e.target === alert) {
       alert.classList.remove('open');

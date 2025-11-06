@@ -1,4 +1,4 @@
-// pages/src/ts/renderProducts.ts
+// pages/src/ts/renderProducts.ts  рендер (малювання) карток 
 import type { Products } from '../types/product';
 
 export function renderProducts(container: HTMLElement, items: Products) {
@@ -14,12 +14,12 @@ if (product.requiresPrescription) {
   card.dataset.requiresPrescription = 'true';
 }
 
-    // БЕЙДЖ АКЦІЇ
+    // напис "акція" на картках 
     const promoBadge = product.isPromo
       ? '<div class="card__badge">Акція</div>'
       : '';
 
-    // ЦІНА: стара + нова (тільки для акцій)
+    // ЦІНА: стара + нова 
     const priceHTML = product.isPromo && product.oldPrice
       ? `
         <p class="card__price">
@@ -29,8 +29,7 @@ if (product.requiresPrescription) {
       `
       : `<p class="card__text">${product.price} ₴</p>`;
 
-    // ОСНОВНА РОЗМІТКА КАРТКИ
-// src/ts/renderProducts.ts
+    // розмітка картки
 card.innerHTML = `
   <div class="card__image">
     ${promoBadge}

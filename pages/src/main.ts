@@ -8,13 +8,13 @@ import productsData from './data/products.json';
 import type { Products } from './types/product';
 import { initScrollToTop } from './ts/scrollTop';
 
-initCart();
-initSearch(productsData as unknown as Products, promoData as unknown as Products);
-initScrollToTop();
+initCart(); //кошик
+initSearch(productsData as unknown as Products, promoData as unknown as Products); // пошук
+initScrollToTop(); // кнопка вгору
 
-// Рендер
+// Рендер ліків 
 const promoGrid = document.querySelector('.promos .cards-grid') as HTMLElement | null;
 const productsGrid = document.querySelector('.products .cards-grid') as HTMLElement | null;
-
-if (promoGrid) renderProducts(promoGrid, promoData as unknown as Products);
-if (productsGrid) renderProducts(productsGrid, productsData as unknown as Products);
+ 
+if (promoGrid) renderProducts(promoGrid, promoData as unknown as Products); //акції
+if (productsGrid) renderProducts(productsGrid, productsData as unknown as Products); //товари
