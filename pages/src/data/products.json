@@ -1,212 +1,212 @@
 [
   {
     "id": 1,
-    "title": "Аспірин Кардіо 100 мг №30",
+    "title": "Аспірин Кардіо 100 мг №98",
     "price": 125,
-    "image": "/src/assets/images/prod1.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/aspirin_cardio.png",
+    "requiresPrescription":  false
   },
   {
     "id": 2,
     "title": "Вітамін D3 1000 МО №60",
     "price": 189,
-    "image": "/src/assets/images/prod2.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/vitamin_d3.png",
+    "requiresPrescription":  false
   },
   {
     "id": 3,
     "title": "Омепразол 20 мг №28",
     "price": 210,
-    "image": "/src/assets/images/prod3.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/omeprazole.png",
+    "requiresPrescription":  false
   },
   {
     "id": 4,
     "title": "Лоратадин 10 мг №10",
     "price": 67,
-    "image": "/src/assets/images/prod4.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/loratadine.png",
+    "requiresPrescription":  false
   },
   {
     "id": 5,
     "title": "Амоксицилін 500 мг №20",
     "price": 156,
-    "image": "/src/assets/images/prod5.jpg",
-    "requiresPrescription": true
+    "image": "/src/assets/images/amoxicillin.png",
+    "requiresPrescription":  true
   },
   {
     "id": 6,
     "title": "Кетонал 100 мг №20",
     "price": 198,
-    "image": "/src/assets/images/prod6.jpg",
+    "image": "/src/assets/images/ketonal.png",
     "requiresPrescription": true
   },
   {
     "id": 7,
     "title": "Бісопролол 5 мг №30",
     "price": 134,
-    "image": "/src/assets/images/prod7.jpg",
+    "image": "/src/assets/images/bisoprolol.png",
     "requiresPrescription": true
   },
   {
     "id": 8,
     "title": "Магне-В6 №60",
     "price": 245,
-    "image": "/src/assets/images/prod8.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/magne_b6.png",
+    "requiresPrescription":  false
   },
   {
     "id": 9,
     "title": "Смекта №10",
     "price": 98,
-    "image": "/src/assets/images/prod9.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/smecta.png",
+    "requiresPrescription":  false
   },
   {
     "id": 10,
     "title": "Лінекс №16",
     "price": 278,
-    "image": "/src/assets/images/prod10.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/linex.png",
+    "requiresPrescription":  false
   },
   {
     "id": 11,
     "title": "Фестал №20",
     "price": 112,
-    "image": "/src/assets/images/prod11.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/festal.png",
+    "requiresPrescription":  false
   },
   {
     "id": 12,
     "title": "Нурофен 200 мг №24",
     "price": 165,
-    "image": "/src/assets/images/prod12.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/nurofen.png",
+    "requiresPrescription":  false
   },
   {
     "id": 13,
     "title": "Кальцій-Д3 №30",
     "price": 189,
-    "image": "/src/assets/images/prod13.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/calcium_d3.png",
+    "requiresPrescription":  false
   },
   {
     "id": 14,
     "title": "Гліцин 100 мг №50",
     "price": 78,
-    "image": "/src/assets/images/prod14.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/glycine.png",
+    "requiresPrescription":  false
   },
   {
     "id": 15,
     "title": "Еналаприл 10 мг №30",
     "price": 145,
-    "image": "/src/assets/images/prod15.jpg",
+    "image": "/src/assets/images/enalapril.png",
     "requiresPrescription": true
   },
   {
     "id": 16,
     "title": "Ранітидин 150 мг №20",
     "price": 96,
-    "image": "/src/assets/images/prod16.jpg",
+    "image": "/src/assets/images/ranitidine.png",
     "requiresPrescription": true
   },
   {
     "id": 17,
     "title": "Амлодипін 5 мг №30",
     "price": 168,
-    "image": "/src/assets/images/prod17.jpg",
+    "image": "/src/assets/images/amlodipine.png",
     "requiresPrescription": true
   },
   {
     "id": 18,
     "title": "Панкреатин №20",
     "price": 87,
-    "image": "/src/assets/images/prod18.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/pancreatin.png",
+    "requiresPrescription":  false
   },
   {
     "id": 19,
     "title": "Супрастин 25 мг №20",
     "price": 134,
-    "image": "/src/assets/images/prod19.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/suprastin.png",
+    "requiresPrescription":  false
   },
   {
     "id": 20,
     "title": "Цитрамон №10",
     "price": 45,
-    "image": "/src/assets/images/prod20.jpg",
-    "requiresPrescription": false
-    },
+    "image": "/src/assets/images/citramon.png",
+    "requiresPrescription":  false
+  },
   {
     "id": 21,
     "title": "Амоксицилін 250 мг №20",
     "price": 132,
-    "image": "/src/assets/images/prod21.jpg",
+    "image": "/src/assets/images/amoxicillin.png",
     "requiresPrescription": true
   },
   {
     "id": 22,
     "title": "Амоксицилін 1000 мг №10",
     "price": 178,
-    "image": "/src/assets/images/prod22.jpg",
+    "image": "/src/assets/images/amoxicillin.png",
     "requiresPrescription": true
   },
   {
     "id": 23,
     "title": "Нурофен 400 мг №12",
     "price": 198,
-    "image": "/src/assets/images/prod23.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/nurofen.png",
+    "requiresPrescription":  false
   },
   {
     "id": 24,
     "title": "Вітамін D3 5000 МО №30",
     "price": 245,
-    "image": "/src/assets/images/prod24.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/vitamin_d3.png",
+    "requiresPrescription":  false
   },
   {
     "id": 25,
     "title": "Бісопролол 2.5 мг №30",
     "price": 112,
-    "image": "/src/assets/images/prod25.jpg",
+    "image": "/src/assets/images/bisoprolol.png",
     "requiresPrescription": true
   },
   {
     "id": 26,
     "title": "Бісопролол 10 мг №30",
     "price": 156,
-    "image": "/src/assets/images/prod26.jpg",
+    "image": "/src/assets/images/bisoprolol.png",
     "requiresPrescription": true
   },
   {
     "id": 27,
     "title": "Омепразол 40 мг №14",
     "price": 189,
-    "image": "/src/assets/images/prod27.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/omeprazole.png",
+    "requiresPrescription":  false
   },
   {
     "id": 28,
     "title": "Лоратадин 5 мг №10",
     "price": 54,
-    "image": "/src/assets/images/prod28.jpg",
-    "requiresPrescription": false
+    "image": "/src/assets/images/loratadine.png",
+    "requiresPrescription":  false
   },
   {
     "id": 29,
     "title": "Еналаприл 5 мг №30",
     "price": 128,
-    "image": "/src/assets/images/prod29.jpg",
+    "image": "/src/assets/images/enalapril.png",
     "requiresPrescription": true
   },
   {
     "id": 30,
     "title": "Амлодипін 10 мг №30",
     "price": 189,
-    "image": "/src/assets/images/prod30.jpg",
+    "image": "/src/assets/images/amlodipine.png",
     "requiresPrescription": true
   }
 ]
