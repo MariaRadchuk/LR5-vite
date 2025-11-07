@@ -123,7 +123,7 @@ class Cart {
   }
 
   this.items.forEach(item => {
-    total += item.price * item.quantity;
+    total += item.price * item.quantity; //додається ціна кожного товару * кількість
 
     const isMax = item.quantity >= MAX_QUANTITY;
     const plusBtnClass = isMax ? 'disabled' : '';
@@ -152,7 +152,7 @@ class Cart {
     );
   });
 
-  this.totalElement.textContent = `${total} ₴`;
+  this.totalElement.textContent = `${total} ₴`; //вивід суми в кошик
 
   // Додаємо для ручного вводу
   this.itemsContainer.querySelectorAll('.qty-input').forEach(input => {
